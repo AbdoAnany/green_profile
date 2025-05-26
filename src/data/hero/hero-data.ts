@@ -17,6 +17,10 @@ export interface HeroData {
     linkedin: string;
     resume: string;
   };
+  story: {
+    title: string;
+    content: [string, string?,string?]; // Array to allow for multi-paragraph content
+  };
   stats: {
     experience: string;
     projects: string;
@@ -43,6 +47,15 @@ export const heroData: HeroData = {
     description: "Building next-generation mobile experiences with beautiful design and seamless performance",
     image: "/placeholder.svg",
     imageAlt: "Profile picture of Abdelrahman Anany"
+  },
+  story: {
+    title: "  Passionate about creating exceptional mobile experiences",
+    content: [
+      "I'm a passionate Flutter developer with a strong background in computer science  and a love for creating innovative mobile applications. With experience across multiple industries, I specialize in building scalable, user-friendly apps that solve real-world problems.",
+      "  My journey in software development has taken me through various exciting projects, from e-commerce platforms to logistics solutions. I'm always eager to learn new technologies and apply best practices in clean architecture and testing.",
+      "I started my career as a Flutter developer, focusing on creating beautiful and functional mobile applications. Over the years, I've honed my skills in various technologies and frameworks, always striving to deliver the best user experience.",
+      
+    ]
   },
   status: {
     available: true,
