@@ -9,7 +9,7 @@ import { BackgroundTechIcons } from '@/components/ui/background-tech-icons';
 import { GeometricShapes, CircuitPattern, CodeSnippets } from '@/components/ui/geometric-shapes';
 import { theme } from '@/data/theme/theme';
 import { devopsIcons, projectIcons } from '@/data/skills';
-
+import { heroData } from '@/data/hero/hero-data';
 const Projects = () => {
   const featuredProjects = getFeaturedProjects();
   const regularProjects = projects.filter(p => !p.featured);
@@ -66,7 +66,7 @@ const Projects = () => {
         className="z-0"
       />
       
-      <Container maxWidth="max-w-7xl">
+      <Container maxWidth="max-w-8xl">
         <div className="text-center mb-24">
           {/* Enhanced badge with gradient border and animations */}
           <div className="inline-flex items-center px-6 py-3 glass-card rounded-full text-teal-400 text-sm font-medium mb-8 relative overflow-hidden group cursor-default">
@@ -134,7 +134,7 @@ const Projects = () => {
         {/* Enhanced GitHub Link with animation */}
         <div className="flex justify-center mt-24">
           <a
-            href="https://github.com/abdelrahman-anany"
+            href={heroData.social.github}
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-3 glass-card px-8 py-4 rounded-xl text-white hover:bg-gradient-to-r hover:from-teal-500/10 hover:to-yellow-400/10 transition-all duration-500 border border-transparent hover:border-teal-500/30 relative overflow-hidden"

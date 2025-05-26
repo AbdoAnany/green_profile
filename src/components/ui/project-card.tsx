@@ -1,7 +1,7 @@
 // Project card component for featured and regular projects
 import React from 'react';
 import { Card, Tag, GradientBadge } from './styled-components';
-import { Project } from '@/data/projects';
+import Project from '@/data/projects';
 import { Star, Users, Download, Github, ExternalLink, ArrowRight, Calendar } from 'lucide-react';
 import { formatDate } from '@/utils/date-utils';
 
@@ -93,12 +93,13 @@ export const ProjectCard = ({ project, index, featured = false }: ProjectCardPro
                   {tech}
                 </Tag>
               ))}
-              {project.technologies.length > (featured ? 4 : 3) && (
+              {/* {project.technologies.length > (featured ? 4 : 3) && (
                 <span className="px-3 py-1 text-xs bg-dark-700/50 backdrop-blur-sm rounded-full text-white/70">+{project.technologies.length - (featured ? 4 : 3)} more</span>
-              )}
+              )} */}
             </div>
-              {/* Action Buttons with improved visibility */}
+         
             <div className="flex gap-3 pt-3 mt-1">
+              {project.githubUrl && (
               <a 
                 href={project.githubUrl}
                 target="_blank"
@@ -107,7 +108,8 @@ export const ProjectCard = ({ project, index, featured = false }: ProjectCardPro
               >
                 <Github size={16} className="text-white/90" />
               </a>
-              
+              )}
+              {project.liveUrl && (
               <a 
                 href={project.liveUrl}
                 target="_blank"
@@ -117,6 +119,7 @@ export const ProjectCard = ({ project, index, featured = false }: ProjectCardPro
                 <span className="text-xs font-medium text-white/90">View Project</span>
                 <ArrowRight size={12} className="text-white/80" />
               </a>
+              )}
             </div>
           </div>
         </div>

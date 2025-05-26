@@ -72,3 +72,5 @@ export function sortProjectsByDate(projectsToSort: Project[]): Project[] {
     new Date(b.date!).getTime() - new Date(a.date!).getTime()
   );
 }
+
+export { Project };
