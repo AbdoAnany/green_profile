@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, ExternalLink, Zap, Code, ArrowRight } from 'lucide-react';
-import { projects, getFeaturedProjects } from '@/data/projects';
+import { getFeaturedProjects } from '@/data/projects';
+import { projects } from '@/data/projects/data';
 import { Section, Container, SectionHeader, BackgroundEffects } from '@/components/ui/styled-components';
 import { ProjectCard, FeaturedProjectCard } from '@/components/ui/project-card';
 import { FloatingShapes, GlowEffect, ParticleNetwork } from '@/components/ui/section-animations';

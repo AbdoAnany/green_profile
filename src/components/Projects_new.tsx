@@ -5,7 +5,7 @@ import { Section, Container, SectionHeader, BackgroundEffects } from '@/componen
 import { ProjectCard, FeaturedProjectCard } from '@/components/ui/project-card';
 import { theme } from '@/data/theme/theme';
 
-const Projects = () => {
+const ProjectsNew = () => {
   const featuredProjects = projects.filter(p => p.featured);
   const regularProjects = projects.filter(p => !p.featured);
 
@@ -70,4 +70,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsNew;
