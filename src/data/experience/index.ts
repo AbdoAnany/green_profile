@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
     startDate: "2023-01-15",
     endDate: null, // Present
     description: "Developed and maintained Flutter applications for paint industry solutions, implementing clean architecture and state management.",
-    technologies: ["Flutter", "Dart", "Firebase", "BLoC"],
+    technologies: ["Flutter", "Dart", "Firebase", "Cuibets", "REST APIs",'Web Socket'],
     color: "from-teal-600 to-dark-700"
   },
   {
@@ -45,16 +45,8 @@ export const experiences: Experience[] = [
     startDate: "2021-06-15",
     endDate: "2022-02-28",
     description: "Designed and developed inventory management system and customer-facing applications, enhancing operational efficiency.",
-    technologies: ["Flutter", "Firebase", "Node.js", "MongoDB"],
+    technologies: ["Flutter", "Firebase Notification", "Cuibets", "REST APIs", "State Management"],
     color: "from-dark-600 to-teal-600"
   },
-  {
-    title: "Junior Developer",
-    company: "Tech Solutions Inc",
-    startDate: "2020-09-01",
-    endDate: "2021-06-10",
-    description: "Contributed to development of web and mobile applications, participated in agile development processes and code reviews.",
-    technologies: ["JavaScript", "React", "HTML/CSS", "Git"],
-    color: "from-teal-600 to-yellow-500"
-  }
+
 ];
