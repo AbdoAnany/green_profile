@@ -1,7 +1,7 @@
 // Project card component for featured and regular projects
 import React from 'react';
 import { Card, Tag, GradientBadge } from './styled-components';
-import Project from '@/data/projects';
+import { Project } from '@/data/projects';
 import { Star, Users, Download, Github, ExternalLink, ArrowRight, Calendar } from 'lucide-react';
 import { formatDate } from '@/utils/date-utils';
 
@@ -18,12 +18,11 @@ export const ProjectCard = ({ project, index, featured = false }: ProjectCardPro
     `${cardRadius} overflow-hidden h-full animate-slide-up` : 
     `${cardRadius} overflow-hidden h-full animate-fade-in`;
   
-  return (
-    <div 
+  return (    <div 
       className={`group glass-card glass-card-hover ${cardClass} hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-700`}
       style={{ animationDelay }}
     >
-      <div className={`relative overflow-hidden h-80 ${cardRadius}`}>
+      <div className={`relative overflow-hidden ${featured ? 'h-80' : 'h-[360px]'} ${cardRadius}`}>
         {/* Project Image with enhanced hover effect */}
         <img
           src={project.image}
@@ -31,14 +30,14 @@ export const ProjectCard = ({ project, index, featured = false }: ProjectCardPro
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:filter group-hover:brightness-110"
         />
           {/* Gradient Overlay with enhanced visibility for text elements */}
-        <div className={`absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-800/80 to-dark-900/40 opacity-95 group-hover:opacity-100 transition-opacity duration-500`}></div>
+        <div className={`absolute inset-0 bg-gradient-to-b from-dark-900/60 via-dark-800/40 to-dark-900/90 opacity-95 group-hover:opacity-100 transition-opacity duration-500`}></div>
         
         {/* Glowing Border Effect on Hover with matched border radius */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
           <div className={`absolute inset-0 ${cardRadius} border border-transparent bg-gradient-to-br from-teal-500/40 to-yellow-400/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700`} style={{maskImage: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)', maskComposite: 'exclude'}}></div>
         </div>
-          {/* Project Info Overlay with improved animations and spacing */}
-        <div className="absolute inset-0 flex flex-col justify-end p-6">
+          {/* Project Info Overlay with improved animations and spacing - Top aligned */}
+        <div className="absolute inset-0 flex flex-col justify-between p-6">
           <div className="space-y-3 transform translate-y-0 transition-all duration-500">            {/* Category Badge and Rating with improved visibility */}
             <div className="flex items-center justify-between mb-2">
               <span className="bg-gradient-to-r from-teal-500/30 to-teal-500/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-semibold text-white border border-teal-500/30 shadow-sm shadow-teal-500/20 transition-all duration-500">
@@ -75,11 +74,12 @@ export const ProjectCard = ({ project, index, featured = false }: ProjectCardPro
                   <span className="font-medium">{project.stats.users}</span>
                 </div>
               )}
-              
-              {project.date && (
+                {project.date && (
                 <div className="flex items-center gap-2 transition-colors duration-500">
                   <Calendar size={14} />
-                  <span className="font-medium">{formatDate(project.date)}</span>
+                  <span className="font-medium">
+                    {typeof project.date === 'number' ? project.date : formatDate(project.date)}
+                  </span>
                 </div>
               )}
             </div>
