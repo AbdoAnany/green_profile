@@ -1,0 +1,175 @@
+import React from 'react';
+import { Download, Mail, ArrowRight, Github, Linkedin } from 'lucide-react';
+import { BackgroundTechIcons } from '@/components/ui/background-tech-icons';
+import { GeometricShapes, CircuitPattern } from '@/components/ui/geometric-shapes';
+import { frontendIcons, heroIcons } from '@/data/skills/data-enhanced';
+
+const Hero = () => {
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToProjects = () => {
+    const element = document.querySelector('#projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  return (    <section className="min-h-screen flex items-center justify-center px-6 pt-20 pb-20 relative overflow-hidden">      {/* Enhanced Animated Background with Dark Teal Yellow Theme */}
+      <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-700"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(20,184,166,0.15)_0%,transparent_70%)]"></div>
+      
+      {/* Teal and Yellow Floating Elements */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-teal-500/20 to-yellow-400/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-yellow-400/20 to-teal-600/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-teal-400/15 to-yellow-400/15 rounded-full blur-2xl animate-float" style={{animationDelay: '4s'}}></div>
+        {/* Add tech icons specific to the hero section */}
+      <BackgroundTechIcons 
+        techIcons={heroIcons} 
+        density="high" 
+      />
+      
+      {/* Add geometric shapes for visual interest */}
+      <GeometricShapes
+        variant="creative"
+        density="low"
+        colorScheme="teal"
+        opacity={0.1}
+      />
+      
+      {/* Add circuit pattern for tech feel */}
+      <CircuitPattern
+        opacity={0.1}
+        color="teal"
+        density="medium"
+        className="z-0"
+      />
+      
+      <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Side - Content */}
+          <div className="text-center lg:text-left space-y-8 animate-fade-in">
+            
+            {/* Status Badge */}
+            <div className="inline-flex items-center px-6 py-3 glass-card rounded-full text-sm mb-8">
+              <span className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></span>
+              <span className="text-white/90">Available for new opportunities</span>
+            </div>
+            
+            {/* Main Heading */}
+            <div className="space-y-4">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+                <span className="text-white">Creative</span>
+                <br />                <span className="text-gradient">
+                  Flutter
+                </span>
+                <br />
+                <span className="text-white">Developer</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed">
+                Building next-generation mobile experiences with beautiful design and seamless performance
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+              <button
+                onClick={scrollToContact}
+                className="group glass-card glass-card-hover px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 transition-all duration-300 flex items-center gap-3 justify-center"
+              >
+                <Mail size={20} />
+                Hire Me
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+              
+              <button
+                onClick={scrollToProjects}
+                className="group glass-card glass-card-hover px-8 py-4 rounded-2xl font-semibold text-white border border-yellow-400/30 hover:border-yellow-400/60 hover:bg-yellow-400/10 transition-all duration-300 flex items-center gap-3 justify-center"
+              >
+                View Work
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
+
+            {/* Quick Links */}
+            <div className="flex gap-4 justify-center lg:justify-start">
+              <a
+                href="https://github.com/abdelrahman-anany"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white/70 hover:text-white transition-colors hover:scale-110 transform duration-300"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href="https://linkedin.com/in/abdelrahman-anany"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white/70 hover:text-white transition-colors hover:scale-110 transform duration-300"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="/resume.pdf"
+                download
+                className="w-12 h-12 glass-card rounded-full flex items-center justify-center text-white/70 hover:text-white transition-colors hover:scale-110 transform duration-300"
+              >
+                <Download size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Right Side - Professional Photo */}
+          <div className="flex justify-center lg:justify-end animate-slide-up" style={{animationDelay: '0.3s'}}>
+            <div className="relative">
+              {/* Profile Image Container */}
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+                <div className="absolute inset-0 glass-card rounded-full p-2">                <div className="w-full h-full bg-gradient-to-br from-teal-500 to-dark-700 rounded-full flex items-center justify-center text-white text-6xl font-bold border-2 border-yellow-400/50">
+                    AA
+                  </div>
+                </div>
+                
+                {/* Floating Tech Icons */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 glass-card rounded-full flex items-center justify-center animate-float">
+                  <span className="text-2xl">📱</span>
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 glass-card rounded-full flex items-center justify-center animate-float" style={{animationDelay: '1s'}}>
+                  <span className="text-2xl">💻</span>
+                </div>
+                <div className="absolute top-1/2 -right-8 w-12 h-12 glass-card rounded-full flex items-center justify-center animate-float" style={{animationDelay: '2s'}}>
+                  <span className="text-xl">⚡</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 animate-fade-in" style={{animationDelay: '0.6s'}}>
+          <div className="text-center glass-card glass-card-hover p-6 rounded-2xl">
+            <div className="text-4xl font-bold text-gradient mb-2">3+</div>
+            <div className="text-sm text-white/60 uppercase tracking-wider">Years Experience</div>
+          </div>
+          <div className="text-center glass-card glass-card-hover p-6 rounded-2xl">
+            <div className="text-4xl font-bold text-gradient mb-2">50+</div>
+            <div className="text-sm text-white/60 uppercase tracking-wider">Projects</div>
+          </div>
+          <div className="text-center glass-card glass-card-hover p-6 rounded-2xl">
+            <div className="text-4xl font-bold text-gradient mb-2">10+</div>
+            <div className="text-sm text-white/60 uppercase tracking-wider">Technologies</div>
+          </div>          <div className="text-center glass-card glass-card-hover p-6 rounded-2xl">
+            <div className="text-4xl font-bold text-gradient mb-2">100%</div>
+            <div className="text-sm text-white/60 uppercase tracking-wider">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
