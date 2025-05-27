@@ -8,9 +8,8 @@ import { GeometricShapes, CircuitPattern } from '@/components/ui/geometric-shape
 import { ParticleNetwork } from '@/components/ui/section-animations';
 import { backendIcons } from '@/data/skills';
 
-const Experience = () => {
-  return (
-    <Section id="experience">
+const Experience = () => {  return (
+    <Section id="experience" className="py-16 sm:py-20 lg:py-24">
       {/* Background effects with the theme system */}
       <BackgroundEffects variant="default" />
       
@@ -45,12 +44,12 @@ const Experience = () => {
         className="z-0"
       />
       
-      <Container maxWidth="max-w-4xl">
+      <Container maxWidth="max-w-4xl" className="px-3 sm:px-4 md:px-6">
         <SectionHeader title="Professional Experience" />
         
-        <div className="relative">
-          {/* Timeline line using theme colors */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-px bg-gradient-to-b from-teal-500 via-teal-400 to-yellow-400"></div>
+        <div className="relative px-2 sm:px-4">
+          {/* Timeline line using theme colors with mobile optimization */}
+          <div className="absolute left-3 sm:left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 sm:w-px bg-gradient-to-b from-teal-500 via-teal-400 to-yellow-400"></div>
           
           {/* Map through experiences from data file */}
           {experiences.map((experience, index) => (
