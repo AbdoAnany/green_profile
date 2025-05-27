@@ -1,0 +1,86 @@
+{
+  "skills": [
+    {
+      "id": "1",
+      "src": "/img/product-chain-1.png",
+      "title": "Front-End",
+      "description": "Crafting engaging and user-friendly interfaces using cutting-edge technologies to enhance the overall user experience."
+    },
+    {
+      "id": "2",
+      "src": "/img/tag-1.png",
+      "title": "Back-End",
+      "description": "Building robust and scalable server-side applications, ensuring seamless functionality and optimal performance."
+    },
+    {
+      "id": "3",
+      "src": "/img/feather-pen-2.png",
+      "title": "UI & UX Design",
+      "description": "Creating visually stunning and intuitive designs, focusing on user experience to elevate digital interactions."
+    },
+    {
+      "id": "4",
+      "src": "/img/feather-pen-1.png",
+      "title": "Webflow Development",
+      "description": "Utilizing Webflow to bring designs to life, combining creativity with technical expertise for responsive and dynamic web solutions."
+    }
+  ],
+
+  "portfolio": [
+    {
+      "id": "1",
+      "src": "/img/placeholder-image-6.webp",
+      "title": "GLC Express",
+      "description": "GLC Paints views painters not merely as clients but as essential partners in their success. To show appreciation, GLC Paints has introduced the GLC Express app, which tracks points earned by painters with each purchase. ",
+      "link": "https://apps.apple.com/eg/app/glc-express/id1543854449",
+      "btn": "App Store"
+    },
+    {
+      "id": "2",
+      "src": "/img/aaaaaa.webp",
+      "title": "GLC Quick",
+      "description": " It ensures instant client-agent communication with a Real-time Chat and boosts efficiency with Quick Answers and an Advanced Database Search for streamlined operations after working hours, delivering pre-recorded responses.",
+      "link": "https://play.google.com/store/apps/details?id=com.glcpaints.glcpaintshrweb&pcampaignid=web_share",
+      "btn": "Google Play"
+    },
+  
+   
+    {
+      "id": "3",
+      "src": "/img/placeholder-image-1.webp",
+      "title": " سوق الجملة",
+      "description": "This displays popular products on the home page, allows users to save favorite products,  view detailed product information, manage cart with total prices, and place orders. The billing screen summarizes the order history.",
+      "link": "https://play.google.com/store/apps/details?id=com.anany.souq1&pcampaignid=web_share",
+      "btn": "Google Play"
+    },
+    {
+      "id": "4",
+      "src": "/img/placeholder-image-2.webp",
+      "title": "Agent Panel",
+      "description": "The system features a dynamic Dashboard View for a quick overview. It ensures instant client-agent communication with a Real-time Chat and boosts efficiency with Quick Answers and an Advanced Database Search for streamlined operations after working hours, delivering pre-recorded responses.",
+      "link": "https://glcex.glcpaints.com:9009/#/",
+      "btn": "Website"
+    },
+ 
+    {
+      "id": "5",
+      "src": "/img/dd.webp",
+      "title": "Dolato",
+      "description": "Developed a visually appealing interface for showcasing Ice Cream Mini Sticks and Ice Cakes. Implemented easy order placement, address selection, and pick-up/delivery options. Integrated a branch locator and loyalty points system. Also, point of sale,  enhanced customer experience.",
+      "link": "https://youtu.be/1E5zrQcyINE",
+      "btn": "View"
+    },
+    {
+      "id": "6",
+      "src": "/img/placeholder-image.webp", 
+
+      "title": "Muslim life ",
+      "description": "Muslim life is  This Islamic app serves as a comprehensive tool for users to stay informed about prayer times, Qibla direction, and engage in the worship and praise of God. It facilitates a convenient and spiritual experience by providing accurate prayer timings, and helping users find the Qibla direction.",
+      "link": "https://play.google.com/store/apps/details?id=com.anany.azkar",
+      "btn": "Google Play"
+    }
+
+ 
+  ]
+
+}

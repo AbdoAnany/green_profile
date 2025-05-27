@@ -1,31 +1,32 @@
-
-import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
-
+import React from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import {heroData} from "@/data/hero/hero-data";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/abdelrahman-anany",
-      label: "GitHub"
+      href: heroData.social.github,
+      label: "GitHub",
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/abdelrahman-anany",
-      label: "LinkedIn"
+      href: heroData.social.linkedin,
+      label: "LinkedIn",
     },
     {
       icon: Mail,
-      href: "mailto:eng.abdelrahman.anany@gmail.com",
-      label: "Email"
-    }
-  ];  return (
-    <footer className="relative overflow-hidden py-16 px-6">      {/* Enhanced Background with Dark Teal Yellow Theme */}
+      href: heroData.social.email,
+      label: "Email",
+    },
+  ];
+  return (
+    <footer className="relative overflow-hidden py-16 px-6">
+      {" "}
+      {/* Enhanced Background with Dark Teal Yellow Theme */}
       <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-700/20 to-dark-800"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(20,184,166,0.15)_0%,transparent_70%)]"></div>
-      
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0 text-center md:text-left">
@@ -39,7 +40,7 @@ const Footer = () => {
               Building the future, one app at a time
             </p>
           </div>
-          
+
           <div className="flex space-x-4">
             {socialLinks.map((link) => (
               <a
@@ -55,7 +56,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
           <p className="text-white/60">
             © {currentYear} Abdelrahman Anany. All rights reserved.

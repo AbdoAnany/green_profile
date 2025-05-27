@@ -69,8 +69,7 @@ const Hero = () => {
                 <br />
                 <span className="text-white">Developer</span>
               </h1>
-              
-              <p className="text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed">
+                <p className="text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed text-center lg:text-left">
                 {heroData.profile.description}
               </p>
             </div>            {/* CTA Buttons */}
