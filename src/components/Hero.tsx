@@ -18,15 +18,16 @@ const Hero = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-  return (    <section className="min-h-screen flex items-center justify-center px-6 pt-20 pb-20 relative overflow-hidden">      {/* Enhanced Animated Background with Dark Teal Yellow Theme */}
+  };  return (
+    <section className="min-h-screen flex items-center justify-center px-3 sm:px-4 md:px-6 pt-16 sm:pt-20 pb-16 sm:pb-20 relative overflow-hidden">
+      {/* Enhanced Animated Background with Dark Teal Yellow Theme */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-700"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(20,184,166,0.15)_0%,transparent_70%)]"></div>
       
-      {/* Teal and Yellow Floating Elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-teal-500/20 to-yellow-400/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-yellow-400/20 to-teal-600/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-teal-400/15 to-yellow-400/15 rounded-full blur-2xl animate-float" style={{animationDelay: '4s'}}></div>
+      {/* Responsive Teal and Yellow Floating Elements */}
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-r from-teal-500/20 to-yellow-400/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-28 h-28 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 bg-gradient-to-r from-yellow-400/20 to-teal-600/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-1/2 right-1/3 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gradient-to-r from-teal-400/15 to-yellow-400/15 rounded-full blur-2xl animate-float" style={{animationDelay: '4s'}}></div>
         {/* Add tech icons specific to the hero section */}
       <BackgroundTechIcons 
         techIcons={heroIcons} 
@@ -47,50 +48,52 @@ const Hero = () => {
         color="teal"
         density="medium"
         className="z-0"
-      />
-      
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      />        <div className="container mx-auto max-w-7xl relative z-10 px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left Side - Content */}
-          <div className="text-center lg:text-left space-y-8 animate-fade-in">
-              {/* Status Badge */}
-            <div className="inline-flex items-center px-6 py-3 glass-card rounded-full text-sm mb-8">
-              <span className={`w-3 h-3 ${heroData.status.available ? 'bg-green-400' : 'bg-red-400'} rounded-full mr-3 animate-pulse`}></span>
+          <div className="text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
+            
+            {/* Status Badge */}
+            <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 glass-card rounded-full text-xs sm:text-sm mb-6 lg:mb-8">
+              <span className={`w-2 h-2 sm:w-3 sm:h-3 ${heroData.status.available ? 'bg-green-400' : 'bg-red-400'} rounded-full mr-2 sm:mr-3 animate-pulse`}></span>
               <span className="text-white/90">{heroData.status.message}</span>
             </div>
-              {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
-                <span className="text-white">Creative</span>
-                <br />                <span className="text-gradient">
+            
+            {/* Main Heading */}
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
+                <span className="text-white block animate-slide-in-left">Creative</span>
+                <span className="text-gradient block animate-slide-in-right" style={{animationDelay: '0.2s'}}>
                   {heroData.profile.subtitle}
                 </span>
-                <br />
-                <span className="text-white">Developer</span>
+                <span className="text-white block animate-slide-in-left" style={{animationDelay: '0.4s'}}>Developer</span>
               </h1>
-                <p className="text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed text-center lg:text-left">
+              
+              <p className="text-lg sm:text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed mx-auto lg:mx-0 animate-fade-in" style={{animationDelay: '0.6s'}}>
                 {heroData.profile.description}
               </p>
             </div>            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
               <button
                 onClick={scrollToContact}
-                className="group glass-card glass-card-hover px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 transition-all duration-300 flex items-center gap-3 justify-center"
+                className="group glass-card glass-card-hover px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-teal-600 to-teal-500 hover:from-teal-500 hover:to-teal-400 transition-all duration-300 flex items-center gap-3 justify-center animate-bounce-subtle"
+                style={{animationDelay: '0.8s'}}
               >
-                <Mail size={20} />
-                {heroData.buttons.primary.text}
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                <Mail size={18} className="sm:w-5 sm:h-5" />
+                <span className="text-sm sm:text-base">{heroData.buttons.primary.text}</span>
+                <ArrowRight size={14} className="sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               
               <button
                 onClick={scrollToProjects}
-                className="group glass-card glass-card-hover px-8 py-4 rounded-2xl font-semibold text-white border border-yellow-400/30 hover:border-yellow-400/60 hover:bg-yellow-400/10 transition-all duration-300 flex items-center gap-3 justify-center"
+                className="group glass-card glass-card-hover px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-white border border-yellow-400/30 hover:border-yellow-400/60 hover:bg-yellow-400/10 transition-all duration-300 flex items-center gap-3 justify-center animate-bounce-subtle"
+                style={{animationDelay: '1s'}}
               >
-                {heroData.buttons.secondary.text}
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                <span className="text-sm sm:text-base">{heroData.buttons.secondary.text}</span>
+                <ArrowRight size={14} className="sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-            </div>            {/* Quick Links */}
+            </div>{/* Quick Links */}
             <div className="flex gap-4 justify-center lg:justify-start">
               <a
                 href={heroData.social.github}
@@ -117,12 +120,10 @@ const Hero = () => {
                 <Download size={20} />
               </a>
             </div>
-          </div>
-
-          {/* Right Side - Professional Photo */}
+          </div>          {/* Right Side - Professional Photo */}
           <div className="flex justify-center lg:justify-end animate-slide-up" style={{animationDelay: '0.3s'}}>
             <div className="relative">
-              {/* Profile Image Container */}              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              {/* Profile Image Container */}              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 glass-card rounded-full p-2">
                   <img 
                     src={heroData.profile.image} 

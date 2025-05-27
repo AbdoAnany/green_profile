@@ -7,9 +7,8 @@ import { FloatingShapes, GlowEffect, ParticleNetwork } from '@/components/ui/sec
 import { GeometricShapes, CodeSnippets } from '@/components/ui/geometric-shapes';
 import { Zap } from 'lucide-react';
 
-const Skills = () => {
-  return (
-    <Section id="skills" className="py-24">
+const Skills = () => {  return (
+    <Section id="skills" className="py-16 sm:py-20 lg:py-24">
       {/* Enhanced background effects */}
       <BackgroundEffects variant="default" />
       <GlowEffect 
@@ -55,10 +54,10 @@ const Skills = () => {
         opacity={0.2}
         className="z-0"
       />
-      
-      <Container maxWidth="max-w-7xl">        <div className="text-center mb-24">
+        <Container maxWidth="max-w-7xl">        
+        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           {/* Enhanced badge with improved hover effect and animation */}
-          <div className="inline-flex items-center px-6 py-3 glass-card rounded-full text-teal-400 text-sm font-medium mb-10 relative overflow-hidden group cursor-default animate-fade-in">
+          <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 glass-card rounded-full text-teal-400 text-xs sm:text-sm font-medium mb-8 sm:mb-10 relative overflow-hidden group cursor-default animate-fade-in">
             {/* Enhanced glowing background effect */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 pointer-events-none">
               <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-yellow-400/20 animate-pulse-slow"></div>
@@ -67,7 +66,7 @@ const Skills = () => {
             {/* Animated icon */}
             <div className="relative mr-2 group-hover:rotate-12 transition-transform duration-700">
               <div className="absolute inset-0 bg-teal-400/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-700 scale-0 group-hover:scale-150"></div>
-              <Zap size={16} className="relative z-10 group-hover:animate-pulse" />
+              <Zap size={14} className="sm:w-4 sm:h-4 relative z-10 group-hover:animate-pulse" />
             </div>
             
             {/* Gradient text on hover */}
@@ -77,7 +76,7 @@ const Skills = () => {
           {/* Enhanced section header */}
           <div className="relative">
             {/* Subtle glow behind the title */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-[180px] h-[15px] bg-teal-500/10 rounded-full blur-xl"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-[120px] sm:w-[180px] h-[10px] sm:h-[15px] bg-teal-500/10 rounded-full blur-xl"></div>
             
             <SectionHeader 
               title="Skills & Technologies" 
@@ -86,22 +85,24 @@ const Skills = () => {
           </div>
           
           {/* Animated accent line */}
-          <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-yellow-400 rounded-full mx-auto mt-8 animate-pulse-slow"></div>
-        </div>
-          {/* Skills Grid with enhanced layout and visual effects */}
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-teal-500 to-yellow-400 rounded-full mx-auto mt-6 sm:mt-8 animate-pulse-slow"></div>
+        </div>          {/* Skills Grid with enhanced layout and visual effects */}
         <div className="relative">
           {/* Improved background effect for the grid */}
-          <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-yellow-400/10 rounded-3xl -m-8 blur-2xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-yellow-400/10 rounded-2xl sm:rounded-3xl -m-4 sm:-m-8 blur-2xl"></div>
           
           {/* Enhanced glowing accent points */}
-          <div className="absolute top-1/4 -left-10 w-20 h-20 bg-teal-500/10 rounded-full blur-xl"></div>
-          <div className="absolute bottom-1/4 -right-10 w-24 h-24 bg-yellow-400/10 rounded-full blur-xl"></div>            {/* Skill cards in a staggered grid for visual interest - no perspective effect */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 px-4 relative py-8">
+          <div className="absolute top-1/4 -left-6 sm:-left-10 w-12 h-12 sm:w-20 sm:h-20 bg-teal-500/10 rounded-full blur-xl"></div>
+          <div className="absolute bottom-1/4 -right-6 sm:-right-10 w-16 h-16 sm:w-24 sm:h-24 bg-yellow-400/10 rounded-full blur-xl"></div>            
+          
+          {/* Skill cards in a responsive grid with staggered animations */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-4 relative py-6 sm:py-8">
             {skillCategories.map((category, index) => (
               <div 
                 key={index} 
-                className={`${index % 2 === 0 ? 'md:translate-y-0' : ''} 
-                            transition-all duration-700 hover:z-10`}
+                className={`${index % 2 === 0 ? 'sm:translate-y-0' : ''} 
+                            transition-all duration-700 hover:z-10 animate-slide-in-up`}
+                style={{animationDelay: `${index * 0.1}s`}}
               >
                 <SkillCard 
                   category={category}
