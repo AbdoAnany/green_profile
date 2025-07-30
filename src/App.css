@@ -17,6 +17,18 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+@keyframes lightning-strike {
+  0% { opacity: 1; transform: scale(1); }
+  20% { opacity: 0.2; transform: scale(1.05); }
+  40% { opacity: 1; transform: scale(0.98); }
+  60% { opacity: 0.4; transform: scale(1.02); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.8; }
+}
+
+.animate-lightning-strike {
+  animation: lightning-strike 0.7s ease-in-out infinite;
+}
 
 @keyframes logo-spin {
   from {

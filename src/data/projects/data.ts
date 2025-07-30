@@ -45,6 +45,29 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  //    {
+  //   "id": "7",
+  //   "src": "/img/game_view.webp",
+
+  //   "title": "GameBoo",
+  //   "description": "GameBoo is an innovative gaming platform that offers a diverse range of games for players of all ages. With a user-friendly interface and engaging gameplay, it aims to provide an enjoyable gaming experience.",
+  //   "link": "https://play.google.com/store/apps/details?id=com.abdoanany.gameboo&pli=1",
+  //   "btn": "Google Play"
+  // }
+  {
+    title: "GameBoo App",
+    date: "2025-07-01",
+    description:
+      "GameBoo is an innovative gaming platform that offers a diverse range of games for players of all ages. With a user-friendly interface and engaging gameplay, it aims to provide an enjoyable gaming experience.",
+    image: "/img/game_view.webp",
+    technologies: ["Flutter", "Firebase", "Game Development", "REST API"],
+    githubUrl: null,
+    liveUrl:
+      "https://play.google.com/store/apps/details?id=com.abdoanany.gameboo&pli=1",
+    featured: true,
+    stats: { downloads: "10+", rating: "4.5", users: "5+" },
+    category: "Gaming",
+  },
   {
     title: "GLC EXPRESS Mobile App",
     date: "2023-01-15",
@@ -146,52 +169,52 @@ export const projects: Project[] = [
     technologies: ["Flutter", "SQLite", "Provider", "REST API", "WebSocket"],
     githubUrl: "https://github.com/AbdoAnany/task-manager",
     liveUrl: "https://taskmanager-demo.web.app",
-    featured: true,
+    featured: false,
     stats: { users: "3K+", rating: "4.6", downloads: "8K+" },
     category: "Productivity",
   },
-  {
-    title: "Weather Forecast App",
-    date: "2023-03-20",
-    description:
-      "Beautiful weather application with location-based forecasts, interactive weather maps, severe weather alerts, and detailed meteorological data visualization.",
-    image:
-      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-    technologies: ["Flutter", "OpenWeather API", "Geolocator", "Charts"],
-    githubUrl: "https://github.com/AbdoAnany/weather-app",
-    liveUrl: "https://weather-flutter-demo.web.app",
-    featured: false,
-    stats: { downloads: "6K+", rating: "4.4", users: "2K+" },
-    category: "Utility",
-  },
-  {
-    title: "Fitness Tracking App",
-    date: "2023-04-10",
-    description:
-      "Comprehensive health and fitness tracker with personalized workout plans, progress monitoring, social sharing features, and integration with wearable devices.",
-    image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
-    technologies: ["Flutter", "HealthKit", "Firebase", "ML Kit"],
-    githubUrl: "https://github.com/AbdoAnany/fitness-tracker",
-    liveUrl: "https://fitness-app-demo.web.app",
-    featured: false,
-    stats: { users: "4K+", rating: "4.5", downloads: "7K+" },
-    category: "Health",
-  },
-  {
-    title: "Social Networking Platform",
-    date: "2023-11-25",
-    description:
-      "Feature-rich social platform with real-time messaging, content sharing, and community engagement tools. Built with a focus on privacy and performance.",
-    image:
-      "https://images.unsplash.com/photo-1522989734594-0728e1b4f2ed?w=600&h=400&fit=crop",
-    technologies: ["Flutter", "Firebase", "WebRTC", "Redux", "Cloud Storage"],
-    githubUrl: "https://github.com/AbdoAnany/social-network",
-    liveUrl: "https://social-app-demo.web.app",
-    featured: false,
-    stats: { users: "8K+", rating: "4.9", downloads: "15K+" },
-    category: "Social",
-  },
+  // {
+  //   title: "Weather Forecast App",
+  //   date: "2023-03-20",
+  //   description:
+  //     "Beautiful weather application with location-based forecasts, interactive weather maps, severe weather alerts, and detailed meteorological data visualization.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
+  //   technologies: ["Flutter", "OpenWeather API", "Geolocator", "Charts"],
+  //   githubUrl: "https://github.com/AbdoAnany/weather-app",
+  //   liveUrl: "https://weather-flutter-demo.web.app",
+  //   featured: false,
+  //   stats: { downloads: "6K+", rating: "4.4", users: "2K+" },
+  //   category: "Utility",
+  // },
+  // {
+  //   title: "Fitness Tracking App",
+  //   date: "2023-04-10",
+  //   description:
+  //     "Comprehensive health and fitness tracker with personalized workout plans, progress monitoring, social sharing features, and integration with wearable devices.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
+  //   technologies: ["Flutter", "HealthKit", "Firebase", "ML Kit"],
+  //   githubUrl: "https://github.com/AbdoAnany/fitness-tracker",
+  //   liveUrl: "https://fitness-app-demo.web.app",
+  //   featured: false,
+  //   stats: { users: "4K+", rating: "4.5", downloads: "7K+" },
+  //   category: "Health",
+  // },
+  // {
+  //   title: "Social Networking Platform",
+  //   date: "2023-11-25",
+  //   description:
+  //     "Feature-rich social platform with real-time messaging, content sharing, and community engagement tools. Built with a focus on privacy and performance.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1522989734594-0728e1b4f2ed?w=600&h=400&fit=crop",
+  //   technologies: ["Flutter", "Firebase", "WebRTC", "Redux", "Cloud Storage"],
+  //   githubUrl: "https://github.com/AbdoAnany/social-network",
+  //   liveUrl: "https://social-app-demo.web.app",
+  //   featured: false,
+  //   stats: { users: "8K+", rating: "4.9", downloads: "15K+" },
+  //   category: "Social",
+  // },
   {
     title: "Delivery Management System",
     date: "2023-12-08",

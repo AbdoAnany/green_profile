@@ -43,8 +43,7 @@
       "link": "https://play.google.com/store/apps/details?id=com.glcpaints.glcpaintshrweb&pcampaignid=web_share",
       "btn": "Google Play"
     },
-  
-   
+
     {
       "id": "3",
       "src": "/img/placeholder-image-1.webp",
@@ -58,10 +57,10 @@
       "src": "/img/placeholder-image-2.webp",
       "title": "Agent Panel",
       "description": "The system features a dynamic Dashboard View for a quick overview. It ensures instant client-agent communication with a Real-time Chat and boosts efficiency with Quick Answers and an Advanced Database Search for streamlined operations after working hours, delivering pre-recorded responses.",
-      "link": "https://glcex.glcpaints.com:9009/#/",
+      "link": "",
       "btn": "Website"
     },
- 
+
     {
       "id": "5",
       "src": "/img/dd.webp",
@@ -72,15 +71,21 @@
     },
     {
       "id": "6",
-      "src": "/img/placeholder-image.webp", 
+      "src": "/img/placeholder-image.webp",
 
-      "title": "Muslim life ",
+      "title": "Muslim life",
       "description": "Muslim life is  This Islamic app serves as a comprehensive tool for users to stay informed about prayer times, Qibla direction, and engage in the worship and praise of God. It facilitates a convenient and spiritual experience by providing accurate prayer timings, and helping users find the Qibla direction.",
       "link": "https://play.google.com/store/apps/details?id=com.anany.azkar",
       "btn": "Google Play"
+    },
+    {
+      "id": "7",
+      "src": "/img/game_view.webp",
+
+      "title": "GameBoo",
+      "description": "GameBoo is an innovative gaming platform that offers a diverse range of games for players of all ages. With a user-friendly interface and engaging gameplay, it aims to provide an enjoyable gaming experience.",
+      "link": "https://play.google.com/store/apps/details?id=com.abdoanany.gameboo&pli=1",
+      "btn": "Google Play"
     }
-
- 
   ]
-
 }
